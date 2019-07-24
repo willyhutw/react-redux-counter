@@ -1,0 +1,35 @@
+.counter {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    background-color: #ccc;
+    color: #fff;
+    
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.inc {
+    width: 20%;
+    border: 1px solid;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.dec {
+    width: 20%;
+    border: 1px solid;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.count {
+    width: 60%;
+    border: 1px solid;
+    font-size: 30px;
+}
