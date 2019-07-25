@@ -1,7 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import { CounterStateType } from "../../store/counter/reducer";
-import { Increment, Decrement } from "../../store/counter/action";
+import { Increment, Decrement } from "../../actions/counter";
 import * as style from "./Counter.scss";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,9 +27,9 @@ const Counter = (props: propsType) => {
   );
 };
 
-const mapStateToProps = (state: CounterStateType) => {
+const mapStateToProps = (state: any) => {
   return {
-    counter: state.counter
+    counter: state.counterStore.counter
   };
 };
 

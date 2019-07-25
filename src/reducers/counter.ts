@@ -10,7 +10,7 @@ const initialCounterState: CounterStateType = {
   counter: 0
 };
 
-export const counterReducer = (state = initialCounterState, action: CounterActionType) => {
+export const counterStore = (state = initialCounterState, action: CounterActionType) => {
   switch (action.type) {
     case "INCREMENT":
       return {
@@ -18,7 +18,7 @@ export const counterReducer = (state = initialCounterState, action: CounterActio
       };
     case "DECREMENT":
       return {
-        counter: state.counter - 1
+        counter: (state.counter - 1 < 0) ? 0 : state.counter - 1
       };
     default:
       return state;
